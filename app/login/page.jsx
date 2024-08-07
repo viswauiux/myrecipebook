@@ -14,7 +14,7 @@ const page = () => {
             const res = await signIn("credentials",{
                 email:userForm.email,password:userForm.password,redirect:false
             });
-          
+            if(res.status===200) route.push('/dashboard');
           } catch (error) {
             console.log(error);
           } finally {
